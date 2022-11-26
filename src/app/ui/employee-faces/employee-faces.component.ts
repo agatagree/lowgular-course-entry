@@ -4,17 +4,12 @@ import { Observable, of } from 'rxjs';
 import { EmployeeModel } from '../../model/employee.model';
 
 @Component({
-  selector: 'employee-list-agata',
-  templateUrl: './employee-list.component.html',
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'app-employee-faces',
+  templateUrl: './employee-faces.component.html',
+  encapsulation: ViewEncapsulation.Emulated,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EmployeeListComponent {
-  constructor(private _httpClient: HttpClient) {
-  }
+export class EmployeeFacesComponent {
+  constructor(private _httpClient: HttpClient) {}
   data$: Observable<EmployeeModel[] | null> = this._httpClient.get<EmployeeModel[]>('assets/data/employees.json');
-
-
-
-
 }

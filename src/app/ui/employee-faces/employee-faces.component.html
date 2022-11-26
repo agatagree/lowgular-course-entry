@@ -1,0 +1,11 @@
+<div class="main-list">
+  <ul class="main-list-img" *ngIf="data$ | async as data; else empty">
+    <li class="list-item-img" *ngFor="let employee of data">
+      <img class="list-img" src={{employee.image}} alt={{employee.name}} />
+      <p>{{employee.name}}</p>
+    </li>
+  </ul>
+</div>
+
+<ng-template #empty> There is no data </ng-template>
+

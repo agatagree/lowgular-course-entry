@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeListComponentModule } from "./ui/employee-list/employee-list.component-module";
 import {EmployeeFacesComponentModule} from "./ui/employee-faces/employee-faces.component-module";
+import {EmployeeServiceModule} from "./services/employee.service-module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,6 +14,7 @@ import {EmployeeFacesComponentModule} from "./ui/employee-faces/employee-faces.c
     AppRoutingModule,
     HttpClientModule,
     EmployeeListComponentModule,
+    EmployeeServiceModule,
     EmployeeFacesComponentModule,
   ],
   providers: [],

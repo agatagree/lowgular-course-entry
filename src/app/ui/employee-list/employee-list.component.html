@@ -1,7 +1,7 @@
 <div class="main-list">
   <h1 class="list-title">Employee list</h1>
 <ul *ngIf="data$ | async as data; else empty">
-  <li class="list-item" *ngFor="let employee of data">{{ employee.id }}: {{ employee.name }}. Email:  {{ employee.email }}</li>
+  <li class="list-item" *ngFor="let employee of data">{{ employee.personalNumber }}: {{ employee.name }}. Email:  {{ employee.email }}</li>
 </ul>
 </div>
 

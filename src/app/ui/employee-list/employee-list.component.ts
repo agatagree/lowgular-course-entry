@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
 import { Observable } from 'rxjs';
 import { EmployeeService } from '../../services/employee.service';
 import {EmployeeApiModel} from "../../model/employee-api.model";
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'employee-list',

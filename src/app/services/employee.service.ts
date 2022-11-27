@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {map, Observable} from 'rxjs';
 import {ApiResponse} from './api.response';
-// import { EmployeeResponse} from "./employee.response";
 import { EmployeeApiModel} from "../model/employee-api.model";
 import {EmployeeResponse} from "./employee.response";
 
@@ -22,16 +21,17 @@ export class EmployeeService {
               employee_salary: employeeResponse.employee_salary,
               employee_age: employeeResponse.employee_age,
               profile_image: employeeResponse.profile_image,
+              mail: employeeResponse.employee_name + "@lowgular.io",
             }
           });
         })
     );
   }
 
-  // create(employee: CreateEmployeeModel): Observable<void> {
-  //   return this._httpClient.post('https://dummy.restapiexample.com/api/v1/create', employee).pipe(map(_ => void 0));
-  // }
-  //
+  create(employee: EmployeeApiModel): Observable<void> {
+    return this._httpClient.post('https://dummy.restapiexample.com/api/v1/create', employee).pipe(map(_ => void 0));
+  }
+
   delete(id: number): Observable<void> {
     return this._httpClient.delete('https://dummy.restapiexample.com/api/v1/delete/' + id).pipe(map(_ =>void 0));
   }

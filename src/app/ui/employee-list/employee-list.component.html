@@ -1,11 +1,12 @@
-<div class="main-list">
-  <h1 class="list-title">Employee list</h1>
-<ul *ngIf="data$ | async as data; else empty">
-  <div  class="list-container"*ngFor="let employee of data">
-  <li class="list-item" >{{ employee.id }}. {{ employee.employee_name}}</li>
-    <button class="list-btn-remove"(click)="remove(employee.id)">x</button>
+<div class="layout-wrapper">
+  <h2 class="list-title">Employee list</h2>
+<ol *ngIf="data$ | async as data; else empty">
+  <div class="container"*ngFor="let employee of data">
+  <li class="list-item" >{{ employee.employee_name}}</li>
+    <p>{{ employee.mail }}</p>
+    <button class="btn"(click)="remove(employee.id)">delete</button>
   </div>
-</ul>
+</ol>
 </div>
 
 <ng-template #empty> There is no data </ng-template>
